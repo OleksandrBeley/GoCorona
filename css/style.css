@@ -45,19 +45,46 @@ a {
 
 /*---------------------------*/
 [class*="__container"] {
-	max-width: 1057px;
+	max-width: 1087px;
 	margin: 0 auto;
+	padding: 0 15px;
 }
 
-/*---------------------------*/
+@media (max-width:1087px) {
+	[class*="__container"] {
+		max-width: 970px;
+	}
+}
 
-.header {}
+/*-----------TABLET----------------*/
+
+@media (max-width:991.98px) {
+	[class*="__container"] {
+		max-width: 750px;
+	}
+}
+
+/*------------MOBILE-------------*/
+@media (max-width:767.8px) {
+	[class*="__container"] {
+		max-width: none;
+	}
+}
+
+/*-------------------------*/
+
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	width: 100%;
+}
 
 .header__container {
 	min-height: 114px;
 	display: flex;
 	align-items: center;
-	background-color: aquamarine;
 
 }
 
@@ -75,27 +102,55 @@ a {
 	display: flex;
 	justify-content: flex-end;
 	text-transform: uppercase;
+	align-items: center;
 }
-
 
 .menu {
 	display: flex;
 	justify-content: flex-end;
+	padding-right: 40px;
 }
 
 .menu__list {
 	list-style-type: none;
 	display: flex;
+	gap: 40px;
 }
-
-
 
 .menu__item {}
 
-.menu__link {}
+.menu__link {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 10px;
+	line-height: 1.2;
+	letter-spacing: 1.2px;
+	color: #000000;
+}
 
+@media (max-width:991.98px) {
+	.header__container {
+		min-height: 80px;
+	}
+
+	.header__button {
+		flex: 0 0 170px;
+	}
+
+	.menu__list {
+		gap: 30px;
+	}
+
+	.menu {
+
+		padding-right: 30px;
+	}
+
+}
 
 .button {
+	display: inline-block;
 	font-family: Raleway;
 	text-transform: uppercase;
 	font-style: normal;
@@ -122,4 +177,34 @@ a {
 
 .button_blue {
 	background-color: #4285F4;
+}
+
+/*-----------BURGER_MENU--------------*/
+.icon-menu {
+	display: none;
+}
+
+@media (max-width:767.8px) {
+
+	.icon-menu {
+		position: relative;
+		flex: 0 0 30px;
+		height: 18px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin-left: 20px;
+	}
+
+	.icon-menu::before,
+	.icon-menu::after {
+		content: "";
+		height: 2px;
+		background-color: #000000;
+	}
+
+	.icon-menu span {
+		height: 2px;
+		background-color: #000000;
+	}
 }
