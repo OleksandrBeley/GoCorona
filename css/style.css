@@ -1,0 +1,61 @@
+/*------------------------------*/
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	height: 100%;
+	font-family: 'Rubik', serif;
+	font-weight: 400;
+	font-size: 12px;
+	color: #616161;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	min-height: 100%;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+/*---------------------------*/
+[class*="__container"] {
+	max-width: 1057px;
+	margin: 0 auto;
+}
+
+/*---------------------------*/
+
+.header {}
+
+.header__container {}
+
+.header__logo {}
+
+.header__img {}
+
+.header__menu {}
+
+.menu {}
+
+.menu__list {}
+
+.menu__item {}
+
+.header__button {}
+
+.button {}
+
+.button_blue {}
